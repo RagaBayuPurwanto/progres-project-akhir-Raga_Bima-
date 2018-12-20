@@ -1,0 +1,47 @@
+.hero-container {
+    background: url(/assets/image/7.png) center center no-repeat;
+    background-size: cover;
+    height: calc(100vh - 145);
+}
+.book-now-container {
+    padding: 35px 50px;
+}
+
+.book-now-button {
+    width: 170px;
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+}
+
+.header-container {
+    height: 100vh;
+    text-align: center;
+}
+
+.home-section {
+    text-align: center;
+    line-height: normal;
+}
+
+.rooms-home-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.rooms-home-display .mat-card {
+    position: relative;
+    text-align: center;
+}
+
+.rooms-suites {
+    background: url(/assets/image/8.jpg)center center no repeat;
+    background-size: cover;
+}
+
+.beach-houses {
+    background: url(/assets/image/8.jpg)center center no repeat;
+    background-size: cover;
+}

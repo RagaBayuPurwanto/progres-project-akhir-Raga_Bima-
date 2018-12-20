@@ -1,0 +1,91 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$thea-primary: (
+    50 : #e5f4f3,
+    100 : #bee4e1,
+    200 : #93d3cd,
+    300 : #67c1b8,
+    400 : #47b3a9,
+    500 : #26a69a,
+    600 : #229e92,
+    700 : #1c9588,
+    800 : #178b7e,
+    900 : #0d7b6c,
+    A100 : #adfff3,
+    A200 : #7affec,
+    A400 : #47ffe4,
+    A700 : #2dffe0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+$thea-accent: (
+    50 : #f0f9f8,
+    100 : #d9efed,
+    200 : #c0e5e2,
+    300 : #a6dbd6,
+    400 : #93d3cd,
+    500 : #80cbc4,
+    600 : #78c6be,
+    700 : #6dbeb6,
+    800 : #63b8af,
+    900 : #50aca2,
+    A100 : #ffffff,
+    A200 : #d9fffb,
+    A400 : #a6fff5,
+    A700 : #8cfff2,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+$hotel-primary: mat-palette($thea-primary, 700, 300, 900);
+$hotel-accent:  mat-palette($thea-accent, 500, 400, 700);
+
+$hotel-warn:    mat-palette($mat-red);
+
+$hotel: mat-light-theme($hotel-primary, $hotel-accent, $hotel-warn);
+
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
+@include angular-material-theme($hotel);
+@include navtabs-component-theme($hotel);
+
+
+
+.mat-list-option:hover,
+.mat-list-option.mat-list-item-focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+    background-color: mat-color($hotel-primary, 50);
+    color: mat-color($hotel-primary, 900);
+}
